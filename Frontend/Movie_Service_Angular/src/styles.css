@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.error.mat-snack-bar-container{
+    background-color: red;
+    color: white;
+}
+.success.mat-snack-bar-container{
+    background-color: rgb(227, 11, 92);
+    color: white;
+}
+
+.confirm-box-container #yes-button{
+    border: 1px solid black;
+    margin-right: 10px;
+}
+
+.confirm-box-container #no-button{
+    border: 1px solid black;
+}
+.confirm-box-container .content-container{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size:x-large;
+}
+
+.confirm-box-container #close-icon{
+  margin-top: 10px;
+  transform: scale(0.9);
+  color: #FF1E1E;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.confirm-box-container .content-span{
+    
+    padding: 35px 16px;
+    text-align: center;
+    font-size: 20px;
+}
+.confirm-box-container .mat-dialog-container{
+    border: 1px solid white;
+    background-color: #FF1E1E;
+}

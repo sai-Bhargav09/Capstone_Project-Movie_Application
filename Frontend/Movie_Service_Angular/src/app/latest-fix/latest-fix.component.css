@@ -1,0 +1,6 @@
+#backImg {
+  background-image: url("/assets/back/nordwood.jpg");
+  /* background-image: url("/assets/back/white.jpg"); */
+  background-attachment: fixed;
+  background-size: 500px;
+}

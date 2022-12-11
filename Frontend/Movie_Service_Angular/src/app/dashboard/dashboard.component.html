@@ -1,0 +1,282 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="header">
+    <div class="headstart">
+      <button class="togglebut" mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()" matTooltip="Menu">menu</mat-icon>
+      </button>
+      <img id="logo" src="assets/logo/moviesflix.png" alt="Avatar">
+      <h1 id="head">MOVIES FLIX</h1>
+    </div>
+    <!-- search -->
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label></mat-label>
+        <input type="text" matTooltip="Search Movies" placeholder="Enter movie name" matInput [formControl]="myControl"
+          [matAutocomplete]="auto" #memory>
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <!-- <mat-icon id="ib" (click)="checking(memory.value)" matTooltip="search">search</mat-icon> -->
+      <a mat-list-item (click)="searchResult(memory.value)">
+        <mat-icon id="ib" fontIcon="search" matTooltip="Search"></mat-icon>
+      </a>
+    </form>
+    <div class="info">
+      <i><img class="userimg" style="cursor: pointer;" src="{{userImage}}" width="30" matTooltip="User Profile" /></i>
+      <button class="r1" [matMenuTriggerFor]="menu" matTooltip="Options"><mat-icon class="adminlogo" style="cursor: pointer;" *ngIf="isUserAdmin" matTooltip="admin logo">security
+      </mat-icon>Hi {{getUser}}</button>
+      <div>
+       
+      </div>
+    </div>
+
+  </mat-toolbar-row>
+  <!-- drawer content -->
+  <div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="redirectToLatestFix()">
+        <mat-icon>announcement</mat-icon>
+        <span>T & C</span>
+      </button>
+      <button mat-menu-item (click)="redirectToAboutUs()">
+        <mat-icon>info</mat-icon>
+        <span>About Us</span>
+      </button>
+      <button mat-menu-item *ngIf="isUserAdmin" (click)="redirectToAdmin()">
+        <mat-icon>security</mat-icon>
+        <span>Admin Features</span>
+      </button>
+      <button mat-menu-item *ngIf="isUserAdmin" (click)="redirectToAllMovies()">
+        <mat-icon>movies</mat-icon>
+        <span>Movies Data</span>
+      </button>
+      <button mat-menu-item (click)="deleteAccount()">
+        <mat-icon>delete</mat-icon>
+        <span>Delete Account</span>
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+
+
+<mat-sidenav-container>
+  <mat-sidenav class="sidenav" #sidenav mode="side">
+    <mat-nav-list>
+
+      <div id="backImg2">
+
+        <div *ngIf="isUserAdmin">
+          <div id="divider"></div>
+          <a mat-list-item>
+            <mat-icon class="sideicon">security</mat-icon>&nbsp;Admin
+          </a>
+        </div>
+        <div id="divider"></div>
+
+        <a mat-list-item (click)="userFavCalledMethod()">
+          <mat-icon class="sideicon" style="color:rgb(227, 11, 92);" fontIcon="favorite"></mat-icon>&nbsp;Favourite
+        </a>
+        <div id="divider"></div>
+
+        <a mat-list-item (click)="userRepCalledMethod()">
+          <mat-icon class="sideicon" style="color:#FF1E1E ;" fontIcon="error"></mat-icon>&nbsp;Reported
+        </a>
+        <div id="divider"></div>
+
+        <button class="sidebtn" mat-list-item [matMenuTriggerFor]="animals">
+          <mat-icon class="sideicon" style="color:rgb(14, 236, 14) ;">search</mat-icon>&nbsp;Find
+          <mat-icon class="sideiconarrow">arrow_right</mat-icon>
+        </button>
+
+        <mat-menu #animals="matMenu">
+          <button class="sidebtn" mat-menu-item [matMenuTriggerFor]="Vertebrates">
+            <mat-icon class="sideicon" fontIcon="movies"></mat-icon>By genre
+          </button>
+          <button class="sidebtn" mat-menu-item [matMenuTriggerFor]="invertebrates">
+            <mat-icon class="sideicon">star_half</mat-icon>By rating
+          </button>
+        </mat-menu>
+
+
+        <mat-menu #Vertebrates="matMenu">
+          <button class="sidebtn" mat-menu-item (click)="getRomanticMovie()">
+            <mat-icon class="sideicon" fontIcon="movies"></mat-icon>
+            <span>Romantic</span>
+          </button>
+
+          <button class="sidebtn" mat-menu-item (click)="getComedyMovie()">
+            <mat-icon class="sideicon" fontIcon="movies"></mat-icon>
+            <span>Comedy</span>
+          </button>
+
+          <button class="sidebtn" mat-menu-item (click)="getThrillerMovie()">
+            <mat-icon class="sideicon" fontIcon="movies"></mat-icon>
+            <span>Thriller</span>
+          </button>
+
+          <button class="sidebtn" mat-menu-item (click)="getScifiMovie()">
+            <mat-icon class="sideicon" fontIcon="movies"></mat-icon>
+            <span>Sci-Fi</span>
+          </button>
+
+          <button class="sidebtn" mat-menu-item (click)="getAdventureMovie()">
+            <mat-icon class="sideicon" fontIcon="movies"></mat-icon>
+            <span>Adventure</span>
+          </button>
+
+          <button class="sidebtn" mat-menu-item (click)="getActionMovie()">
+            <mat-icon class="sideicon" fontIcon="movies"></mat-icon>
+            <span>Action</span>
+          </button>
+        </mat-menu>
+
+        <mat-menu #invertebrates="matMenu">
+          <button class="sidebtn" mat-menu-item (click)="getRatingAbove7()">
+            <mat-icon class="sideicon">star_half</mat-icon>
+            <span>Above 7.0</span>
+          </button>
+
+          <button class="sidebtn" mat-menu-item (click)="getRatingAbove8()">
+            <mat-icon class="sideicon">star_half</mat-icon>
+            <span>Above 8.0</span>
+          </button>
+
+          <button class="sidebtn" mat-menu-item (click)="getRatingAbove9()">
+            <mat-icon class="sideicon">star_half</mat-icon>
+            <span>Above 9.0</span>
+          </button>
+        </mat-menu>
+
+        <div id="divider"></div>
+        <div id="supportSideNav">d</div>
+      </div>
+
+    </mat-nav-list>
+
+    <!-- drawer content -->
+  </mat-sidenav>
+
+  <!-- ---------------------------------------------------------------------------- -->
+  <mat-sidenav-content>
+
+    <mat-progress-bar mode="indeterminate" *ngIf="hideprogress"></mat-progress-bar>
+    <div id="backImg" *ngIf="hideCards">
+      <div id="justAlligning">s</div>
+
+      <div style="margin-top: 30px;" *ngFor="let i of searchData">
+        <div class="row" id="movieBox">
+          <h1>Movie : {{i.movieName | uppercase}}</h1>
+          <h2>{{i.rating}} | {{i.genre}} | {{i.duration}}</h2>
+          <div class="searchcontent">
+            <div class="col-lg-3 col-md-3"><img id="searchimg" src="{{imageUrlForSearch}}" [routerLink]="['/video',i.movieId]"
+                alt="error"></div>
+            <div class="col-lg-8 col-md-7">
+              <div id="descr">{{i.description}}</div>
+            </div>
+          </div>
+          <button style="margin-top: 10px;" mat-flat-button color="primary" (click)="removeSearchBar()"
+            matTooltip="close Serach">Close</button>
+        </div>
+      </div>
+
+      <div id="align" *ngIf="searchCalled">
+        <button id="btn2" mat-flat-button color="primary" (click)="removeAllSearch()">CLEAR RESULT</button>
+        <div class="row">
+          <h2 id="header2">{{searchMsg}}</h2>
+          <div id="imdbCard" *ngFor="let s of moviesByGenre">
+            <img id="imdbImage" src="{{s.thumbnail}}">
+            <div id="contM">
+              <div style="color:rgb(227, 217, 217);">
+                <mat-icon id="iconM">star</mat-icon>&nbsp;{{s.rating}}
+              </div>
+              <h3 id="movieName">{{s.movieName}}</h3>
+            </div>
+            <div id="options">
+              <mat-icon id="icon2M1" style="cursor: pointer;" matTooltip="Play">play_circle_filled</mat-icon>
+              <mat-icon id="icon2M2" style="cursor: pointer;" matTooltip="Add to Favourites">favorite</mat-icon>
+              <mat-icon id="icon2M3" style="cursor: pointer;" matTooltip="Add to Reported Movies">error</mat-icon>
+            </div>
+          </div>
+        </div>
+        <div id="divider2"></div>
+      </div>
+
+      <div id="align" *ngIf="favCalled">
+        <div class="row">
+          <h2 id="header2">{{userFavMsg}}</h2>
+          <div id="imdbCard" *ngFor="let s of userFavourites">
+            <img id="imdbImage" src="{{s.thumbnail}}">
+            <div id="contM">
+              <div style="color:rgb(227, 217, 217);">
+                <mat-icon id="iconM">star</mat-icon>&nbsp;{{s.rating}}
+              </div>
+              <h3 id="movieName">{{s.movieName}}</h3>
+            </div>
+            <div id="options2">
+              <mat-icon id="icon2M1" style="cursor: pointer;" matTooltip="Play" [routerLink]="['/video',s.movieId]">play_circle_filled</mat-icon>
+              <mat-icon id="icon2M2" style="cursor: pointer;" matTooltip="Remove From Favourites" (click)="unFavourite(s.movieId)">remove_circle</mat-icon>
+            </div>
+          </div>
+        </div>
+        <div id="divider2"></div>
+      </div>
+
+      <div id="align" *ngIf="userRepCalled">
+        <div class="row">
+          <h2 id="header2">{{userRepMsg}}</h2>
+          <div id="imdbCard" *ngFor="let s of getAllReportedMovies">
+            <img id="imdbImage" src="{{s.repThumbnail}}">
+            <div id="contM">
+              <div style="color:rgb(227, 217, 217);">
+                <mat-icon id="iconM">star</mat-icon>&nbsp;{{s.repRating}}
+              </div>
+              <h3 id="movieName">{{s.repMovieName | uppercase}}</h3>
+            </div>
+            <div id="options2">
+              <mat-icon id="icon2M1" style="cursor: pointer;" matTooltip="Play" [routerLink]="['/video',s.repMovieId]">play_circle_filled</mat-icon>
+              <mat-icon id="icon2M2" style="cursor: pointer;" matTooltip="Remove" (click)="unReportMovie(s.repMovieId,s.repMovieName)">cancel</mat-icon>
+            </div>
+          </div>
+        </div>
+        <div id="divider2"></div>
+      </div>
+
+      <div class="container" *ngIf="hideCards">
+        <div class="row gy-3 my-3">
+          <div id="movieCard" *ngFor="let s of allMoviesData | paginate:{itemsPerPage:cardsize,
+            currentPage:page, totalItems:counter}; let i = index" class="col-lg-2 col-md-3 col-sm-3 col-xm-3">
+            <div appImagehover class="card movie" id="movieCard2">
+              <img matTooltip="{{s.movieName}}" class="card-img-top" [routerLink]="['/video',s.movieId]"
+                src="{{s.thumbnail}}">
+              <span id="rating" class="fa fa-star checked card-span-top">&nbsp;{{s.rating}}</span>
+              <span id="opr1">
+                <mat-icon id="ic1" matTooltip="Add to Favourites" fontIcon="favorite" (click)="favourite(s)"></mat-icon>
+              </span>
+              <span id="opr2">
+                <mat-icon id="ic2" matTooltip="Add to Reported Movies" (click)="ReportMovies(s)">error</mat-icon>
+              </span>
+            </div>
+          </div>
+
+          <div class="paginator-arrange">
+            <pagination-controls priviousLabel="prev" nextLabel="Next" (pageChange)="onCardDataChange($event)">
+            </pagination-controls>
+          </div>
+        </div>
+      </div>
+      <span id="spa">.</span>
+    </div>
+
+    <a (click)="redirectToDashAgain()" *ngIf="featureBtn">Back to dashboard</a>
+    <!-- main content -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<router-outlet></router-outlet>

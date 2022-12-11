@@ -1,0 +1,455 @@
+@import url('https://https://fonts.googleapis.com/css?family=Dancing+Script');
+
+.r1 {
+  color: white;
+  text-decoration-line: none;
+  font-weight: 500;
+  font-size: large;
+  background-color: rgb(46, 45, 45);
+  padding: 5px 20px;
+  border-radius: 14px;
+}
+
+.r1:hover {
+  color: red;
+  background-color: whitesmoke;
+  transition: .9s;
+  cursor: pointer;
+}
+
+#logo {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.headlogo {
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+}
+
+#head {
+  display: flex;
+  align-items: center;
+}
+
+.videocon{
+  display: flex;
+  margin: 20px 50px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 95vw;
+}
+
+#youtube {
+  width: 74vw;
+  height: 80vh;
+  border: 2px solid white;
+}
+
+#desc3 {
+  width: 280px;
+  height: 79vh;
+  flex-wrap: wrap;
+  color: black;
+  border: 2px solid #262424;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 15px;
+  text-align: justify;
+  background-color:#262424;
+  background-image: url("/assets/back/white.jpg");
+  font-family: DancingScript;
+  font-size: medium;
+}
+
+#chipM {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 50px;
+}
+
+#chip {
+  cursor: pointer;
+  margin-right: 10px;
+  outline: 2px solid black;
+}
+
+.slider-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 330px;
+  margin: 20px 0 10px 0;
+}
+
+.slider-main {
+  width: 100%;
+}
+
+.prev {
+  position: relative;
+  left: -10px;
+  top: -175px;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  height: 50px;
+  background-color: white;
+  border: none;
+}
+
+.next {
+  position: relative;
+  right: -97%;
+  top: -175px;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  height: 50px;
+  background-color: white;
+  border: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card:hover {
+  cursor: pointer;
+  border-color: red;
+}
+
+.card {
+  width: 224px;
+  height: 300px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 15px 25px 20px 10px;
+  text-align: center;
+}
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.movie {
+  overflow: hidden;
+}
+
+.movie span {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  padding: 5px;
+  color: rgb(245, 245, 12);
+  font-weight: bold;
+}
+
+.movie:hover img {
+  transform: scale(1.4);
+}
+
+#backImg {
+  background-image: url("/assets/back/white.jpg");
+  background-attachment: fixed;
+  background-size: 1160px;
+}
+
+#backImg2 {
+  background-image: url("/assets/back/white.jpg");
+  background-attachment: fixed;
+  background-size: 200px;
+}
+
+.text-justify {
+  color: black;
+  background-image: url("/assets/back/white.jpg");
+}
+
+/* Media Queries */
+
+/* upto 1400px */
+@media only screen and (max-width: 1400px) {
+  #youtube {
+    width: 500px;
+    height: 50vh;
+    border: 2px solid white;
+  }
+  
+  #desc3 {
+    width: 500px;
+    flex-wrap: wrap;
+    color: black;
+    border: 2px solid #262424;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 15px;
+    text-align: justify;
+    background-color:#262424;
+    background-image: url("/assets/back/white.jpg");
+    font-family: DancingScript;
+    font-size: medium;
+  }
+
+  .card {
+    width: 240px;
+    height: 300px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 15px 25px 20px 10px;
+    text-align: center;
+  }
+}
+
+/* upto 1200px */
+@media only screen and (max-width: 1200px) {
+  #youtube {
+    width: 400px;
+    height: 40vh;
+    border: 2px solid white;
+  }
+  
+  #desc3 {
+    width: 400px;
+    height: 40vh;
+    flex-wrap: wrap;
+    color: black;
+    border: 2px solid #262424;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 15px;
+    text-align: justify;
+    background-color:#262424;
+    background-image: url("/assets/back/white.jpg");
+    font-family: DancingScript;
+    font-size: medium;
+  }
+
+  .card {
+    width: 274px;
+    height: 300px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 15px 25px 20px 10px;
+    text-align: center;
+  }
+}
+
+/* upto 1000px */
+@media only screen and (max-width: 1000px) {
+  #youtube {
+    width: 300px;
+    height: 40vh;
+    border: 2px solid white;
+  }
+  
+  #desc3 {
+    width: 300px;
+    height: 40vh;
+    font-size: 10px;
+    flex-wrap: wrap;
+    color: black;
+    border: 2px solid #262424;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    text-align: justify;
+    background-color:#262424;
+    background-image: url("/assets/back/white.jpg");
+    font-family: DancingScript;
+  }
+
+  .r1{
+    scale: 0.8;
+    margin-right: -15px;
+  }
+
+  #logo{
+    scale: 0.8;
+  }
+
+  #head{
+    margin-left: -20px;
+    scale: 0.8;
+  }
+
+  .headlogo{
+    margin-left: -10px;
+    width: 150px;
+  }
+
+  .card {
+    width: 196px;
+    height: 280px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 15px 25px 20px 11px;
+    text-align: center;
+  }
+}
+
+/* upto 770px */
+@media only screen and (max-width: 770px) {
+  .videocon{
+    justify-content: center;
+  }
+
+  #youtube {
+    width: 300px;
+    height: 40vh;
+    border: 2px solid white;
+  }
+  
+  #desc3 {
+    width: 300px;
+    height: 40vh;
+    font-size: 10px;
+    flex-wrap: wrap;
+    color: black;
+    border: 2px solid #262424;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    text-align: justify;
+    background-color:#262424;
+    background-image: url("/assets/back/white.jpg");
+    font-family: DancingScript;
+  }
+
+  #chipM {
+    scale: 0.8;
+    text-align: center;
+  }
+
+  .r1{
+    scale: 0.6;
+    margin-right: -20px;
+  }
+
+  #logo{
+    scale: 0.6;
+  }
+
+  #head{
+    margin-left: -20px;
+    scale: 0.6;
+  }
+
+  .headlogo{
+    margin-left: -10px;
+    width: 100px;
+  }
+
+  .card {
+    width: 203px;
+    height: 280px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 15px 25px 20px 30px;
+    text-align: center;
+  }
+}
+
+/* upto 600px */
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 140px;
+    height: 200px;
+    border-radius: 10px;
+    display: inline-block;
+    /* margin: 15px 25px 0px 30px; */
+    text-align: center;
+  }
+
+  .slider-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+    margin: 20px 0 20px 0;
+    text-align: center;
+  }
+
+  .prev {
+    left: 60px;
+    top: -135px;
+    border: none;
+  }
+  
+  .next {
+    right: -82%;
+    top: -135px;
+    border: none;
+  }
+}
+
+/* upto 520px */
+@media only screen and (max-width: 520px) {
+  .card {
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 15px 25px 0px 75px;
+    text-align: center;
+  }
+}
+
+/* upto 460px */
+@media only screen and (max-width: 460px) {
+  .videocon{
+    justify-content: center;
+  }
+
+  #youtube {
+    width: 250px;
+    height: 35vh;
+    border: 2px solid white;
+  }
+  
+  #desc3 {
+    width: 250px;
+    height: 40vh;
+    font-size: 8px;
+    flex-wrap: wrap;
+    color: black;
+    border: 2px solid #262424;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    text-align: justify;
+    background-color:#262424;
+    background-image: url("/assets/back/white.jpg");
+    font-family: DancingScript;
+  }
+
+  #chipM {
+    scale: 0.6;
+    text-align: center;
+    margin-right: -70px;
+    margin-left: -70px;
+  }
+
+  .r1{
+    scale: 0.6;
+    margin-right: -20px;
+  }
+
+  #logo{
+    scale: 0.6;
+  }
+
+  #head{
+    margin-left: -20px;
+    scale: 0.6;
+  }
+
+  .headlogo{
+    margin-left: -10px;
+    width: 100px;
+  }
+}

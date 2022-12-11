@@ -1,0 +1,45 @@
+version : '3.3'
+
+services:
+  auth_service:
+    image: auth_demo_image
+    build: authDemo/
+    container_name: auth_demo_container
+    network_mode: host
+    restart: always
+    depends_on:
+      - mysql_service
+
+  mysql_service:
+    image: mysql:5.5
+    container_name: mysql_container
+    network_mode: host
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USERNAME: user
+      MYSQL_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
+  product_services:
+    image: user_product_app_image
+    build: productapp/
+    container_name: user_product_app_container
+    network_mode: host
+    restart: always
+    depends_on:
+      - mongo_service
+
+  mongo_service:
+    image: mongo:3.4-jessie
+    container_name: mongo_container
+    network_mode: host
+
+  gw_service:
+    image: api_gw_image
+    build: apigw/
+    container_name: gw_container
+    network_mode: host
+    restart: always
+    depends_on:
+      - auth_service
+      - product_services

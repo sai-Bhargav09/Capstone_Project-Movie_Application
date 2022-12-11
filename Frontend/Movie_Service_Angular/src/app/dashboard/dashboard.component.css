@@ -1,0 +1,1166 @@
+@import url('https://https://fonts.googleapis.com/css?family=Dancing+Script');
+
+#head {
+  font-size: x-large;
+  font-family: DancingScript;
+}
+
+#ib {
+  margin-left: 5px;
+  margin-right: 10px;
+  color: white;
+  padding-top: 5px;
+}
+
+#ib:hover {
+  cursor: pointer;
+  color: rgb(32, 227, 32);
+  transition: .5s;
+}
+
+.togglebut:hover {
+  color: #bbb;
+  transition: .5s;
+}
+
+.menu {
+  margin-right: 20px;
+}
+
+#byGenre {
+  margin-left: 320px;
+}
+
+.r1 {
+  color: white;
+  border: transparent;
+  text-decoration-line: none;
+  font-weight: 500;
+  font-size: large;
+  background-color: Transparent;
+  overflow: hidden;
+  font-family:DancingScript;
+  margin-left: -50px;
+}
+
+.r1:hover {
+  cursor: pointer;
+  color: gray;
+  transition: .8s;
+}
+
+#logo {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headstart {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.adminlogo {
+  padding-top: 3px;
+ 
+}
+
+.userimg {
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+#ch {
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#back {
+  border: 1px solid white;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  background-color: black;
+  border-radius: 15px;
+  width: 100px;
+  float: left;
+}
+
+#back2 {
+  border: 1px solid white;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  background-color: black;
+  border-radius: 15px;
+  width: 65px;
+  margin-left: 110px;
+}
+
+#divider {
+  border-top: 1px solid rgb(126, 124, 124);
+  width: 140px;
+  margin-left: 10px;
+}
+
+#divider2 {
+  border-top: 3px solid rgb(126, 124, 124);
+  width: 1245px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+#che {
+  margin-top: 1000px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 7px;
+}
+
+.example-full-width {
+  width: 100%;
+} 
+
+.movie:hover img {
+  transform: scale(1.4);
+}
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.movie {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card:hover {
+  cursor: pointer;
+  border-color: black;
+  border: 2px solid black;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.card1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.movie span {
+  position: absolute;
+  left: 10px;
+  padding: 5px;
+  color: rgb(255, 215, 0);
+  font-weight: bold;
+}
+
+.paginator-arrange {
+  margin: 40px 0;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+}
+
+#spa {
+  margin-top: 30px;
+}
+
+.movie iframe {
+  width: 25%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 20px 20px;
+}
+
+.movie h6 {
+  position: absolute;
+  right: 10%;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  font-family: DancingScript;
+}
+
+.example-card {
+  max-width: 400px;
+  margin-bottom: 8px;
+}
+
+#movieBox {
+  border: 1px solid rgb(171, 171, 171);
+  color: black;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  margin-right: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  background-image: url("/assets/back/w2.jpg");
+}
+
+#descr {
+  font-family: DancingScript;
+  font-size: large;
+  text-align: justify;
+}
+
+.searchcontent{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+#searchimg {
+  border-radius: 15px;
+  height:360px;
+  width:260px;
+}
+
+#searchimg:hover {
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#rating {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: black;
+  margin-top: 5px;
+  padding: 7px;
+}
+
+#ic1 {
+  position: absolute;
+  left: 0;
+  top: 260px;
+  color: rgb(227, 11, 92);
+  transform: scale(1.3);
+}
+
+#ic2 {
+  position: absolute;
+  left: 40px;
+  top: 260px;
+  color: #FF1E1E;
+  transform: scale(1.4);
+}
+
+#page {
+  text-decoration-line: none;
+  text-underline-offset: none;
+  color: blue;
+}
+
+#backImg {
+  background-image: url("/assets/back/white.jpg");
+  background-attachment: fixed;
+}
+
+#backImg2 {
+  background-image: url("/assets/back/white.jpg");
+  background-attachment: fixed;
+}
+
+#supportSideNav {
+  margin-top: 700px;
+  color: white;
+  width: 160px;
+  text-indent: -9999px;
+}
+
+#justAlligning {
+  text-indent: -9999px;
+  color: white;
+}
+
+#options {
+  margin-left: 27px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+#options2 {
+  margin-left: 47px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+#icon2M1 {
+  transform: scale(1.2);
+  color: #FF0000;
+  background-color: white;
+  border-radius: 12px;
+  margin-right: 15px;
+}
+
+#icon2M2 {
+  transform: scale(1.2);
+  color: rgb(227, 11, 92);
+  background-color: white;
+  border-radius: 12px;
+  margin-right: 15px;
+}
+
+#icon2M3 {
+  transform: scale(1.2);
+  color: #FF1E1E;
+  background-color: white;
+  border-radius: 12px;
+}
+
+#btn2{
+  text-align: center;
+  width: 125px;
+}
+
+#header2 {
+  color: black;
+  font-family: DancingScript;
+  font-size: x-large;
+  margin-top: 10px;
+}
+
+#contM {
+  padding-left: 8px;
+}
+
+#align {
+  margin-left: 30px;
+}
+
+#imdbCard {
+  border: 1px solid black;
+  width: fit-content;
+  background-color: #454545;
+  margin-left: 7px;
+  margin-bottom: 10px;
+  height: 330px;
+}
+
+#imdbImage {
+  padding-top: 10px;
+  height: 220px;
+  width: 160px;
+  margin-bottom: 0px;
+}
+
+#movieName {
+  white-space: nowrap;
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  font-family: DancingScript;
+}
+
+#iconM {
+  color: rgb(255, 215, 0);
+  padding-top: 4px;
+}
+
+.col-lg-2 {
+  width: 20%;
+}
+
+.sideicon {
+  margin-right: 5px;
+}
+
+/* Media Queries */
+
+/* upto 1400px */
+@media only screen and (max-width: 1200px) {
+  .example-form {
+    width: 400px;
+    border-radius: 7px;
+  }
+
+  .card {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+  }
+
+  #ic1 {
+    position: absolute;
+    left: 0;
+    top: 260px;
+    color: rgb(227, 11, 92);
+    transform: scale(1.3);
+  }
+
+  #ic2 {
+    position: absolute;
+    left: 40px;
+    top: 260px;
+    color: #FF1E1E;
+    transform: scale(1.4);
+  }
+}
+
+/* upto 1250px */
+@media only screen and (max-width: 1250px) {
+  .example-form {
+    width: 350px;
+    border-radius: 7px;
+  }
+
+  .card {
+    width: 180px;
+    height: 280px;
+    border-radius: 10px;
+  }
+
+  #ic1 {
+    position: absolute;
+    left: 0;
+    top: 240px;
+    color: rgb(227, 11, 92);
+    transform: scale(1.3);
+  }
+
+  #ic2 {
+    position: absolute;
+    left: 40px;
+    top: 240px;
+    color: #FF1E1E;
+    transform: scale(1.4);
+  }
+}
+
+/* upto 1000px */
+@media only screen and (max-width: 1000px) {
+  .example-form {
+    width: 200px;
+    border-radius: 7px;
+  }
+
+  .card {
+    width: 170px;
+    height: 260px;
+    border-radius: 10px;
+  }
+
+  .col-lg-2 {
+    width: 25%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  #ic1 {
+    position: absolute;
+    left: 0;
+    top: 225px;
+    color: rgb(227, 11, 92);
+    transform: scale(1.3);
+  }
+
+  #ic2 {
+    position: absolute;
+    left: 35px;
+    top: 225px;
+    color: #FF1E1E;
+    transform: scale(1.4);
+  }
+}
+
+/* upto 900px */
+@media only screen and (max-width: 900px) {
+  .example-form {
+    width: 200px;
+    border-radius: 7px;
+  }
+}
+
+/* upto 800px */
+@media only screen and (max-width: 800px) {
+  .example-form {
+    width: 160px;
+    border-radius: 7px;
+    scale: 0.9;
+  }
+
+  .r1 {
+    scale: 0.9;
+  }
+
+  .userimg {
+    scale: 0.9;
+  }
+
+  .headstart {
+    margin-left: -10px;
+    width: 210px;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+  }
+
+  .adminlogo {
+    scale: 0.9;
+  }
+
+  .card {
+    width: 140px;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-sm-3 {
+    width: 33%;
+  }
+
+  #head {
+    align-self: center;
+    margin-left: -20px;
+    font-family: DancingScript;
+    scale: 0.8;
+  }
+
+  .togglebut {
+    margin-left: -10px;
+    scale: 0.9;
+  }
+
+  #logo {
+    align-self: center;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: -20px;
+  }
+
+  #ic1 {
+    position: absolute;
+    left: 0;
+    top: 165px;
+    color: rgb(227, 11, 92);
+    scale: 0.8;
+  }
+
+  #ic2 {
+    position: absolute;
+    left: 30px;
+    top: 165px;
+    color: #FF1E1E;
+    scale: 0.75;
+  }
+
+  #rating {
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: black;
+    margin-top: 3px;
+    margin-left: -5px;
+    padding: 5px;
+    scale: 0.7;
+  }
+
+  #searchimg {
+    border-radius: 10px;
+    height:300px;
+    width:200px;
+  }
+
+  #header2 {
+    color: black;
+    font-family: DancingScript;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  #imdbCard {
+    border: 1px solid black;
+    width: 160px;
+    height: 280px;
+    background-color: #454545;
+    margin-left: 7px;
+    margin-bottom: 10px;
+  }
+  
+  #imdbImage {
+    padding-top: 10px;
+    height: 180px;
+    width: 140px;
+    margin-bottom: 0px;
+  }
+
+  #options {
+    margin-left: 18px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+  }
+
+  #options2 {
+    margin-left: 25px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+  }
+  
+  #icon2M1 {
+    transform: scale(1.1);
+    color: #FF0000;
+    background-color: white;
+    border-radius: 12px;
+    margin-right: 15px;
+  }
+  
+  #icon2M2 {
+    transform: scale(1.1);
+    color: rgb(227, 11, 92);
+    background-color: white;
+    border-radius: 12px;
+    margin-right: 15px;
+  }
+  
+  #icon2M3 {
+    transform: scale(1.1);
+    color: #FF1E1E;
+    background-color: white;
+    border-radius: 12px;
+  }
+  
+  #btn2{
+    font-size: 14px;
+    width: 120px;
+  }
+
+  #movieName {
+    margin-left: -10px;
+    font-size: 14px;
+  }
+  
+  #iconM {
+    scale: 0.9;
+  }
+}
+
+/* upto 700px */
+@media only screen and (max-width: 700px) {
+  .example-form {
+    width: 140px;
+    border-radius: 7px;
+  }
+
+  .r1 {
+    scale: 0.7;
+    margin-left: -10px;
+    margin-right: -15px;
+  }
+
+  .headstart {
+    margin-left: -10px;
+    width: 190px;
+  }
+
+  #head {
+    margin-left: -30px;
+    font-family: DancingScript;
+    scale: 0.7;
+  }
+
+  .userimg {
+    scale: 0.7;
+  }
+
+  .info {
+    width: 150px;
+  }
+
+  .adminlogo {
+    scale: 0.9;
+  }
+
+  .card {
+    width: 140px;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .paginator-arrange {
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    scale: 0.6;
+  }
+}
+
+/* upto 650px */
+@media only screen and (max-width: 650px) {
+  .example-form {
+    width: 120px;
+    border-radius: 7px;
+    scale: 0.8;
+  }
+
+  .card {
+    width: 140px;
+    height: 200px;
+    border-radius: 8px;
+  }
+}
+
+/* upto 550px */
+@media only screen and (max-width: 550px) {
+  .example-form {
+    width: 140px;
+    scale: 0.7;
+  }
+  #divider {
+    width: 70px;
+  }
+
+  .sidenav {
+    width: 90px;
+  }
+
+  .sidenav a {
+    font-size: 12px;
+    margin-left: 1px;
+  }
+
+  .sideicon {
+    margin-top: 10px;
+    margin-left: -11px;
+    font-size: 10px;
+  }
+
+  .sideiconarrow {
+    margin-left: 1px;
+  }
+
+  .sidebtn {
+    font-size: 12px;
+  }
+
+  #imdbCard {
+    border: 1px solid black;
+    width: 140px;
+    height: 220px;
+    background-color: #454545;
+    margin-left: 7px;
+    margin-bottom: 10px;
+  }
+  
+  #imdbImage {
+    padding-top: 10px;
+    height: 150px;
+    width: 120px;
+    margin-bottom: -10px;
+  }
+
+  #movieName {
+    font-size: 12px;
+  }
+  
+  #iconM {
+    scale: 0.6;
+  }
+
+  #contM {
+    margin-left: -30px;
+    scale: 0.7;
+  }
+
+  #icon2M1 {
+    scale: 0.7;
+  }
+  
+  #icon2M2 {
+    scale: 0.7;
+    margin-left: -10px;
+    margin-right: 2px;
+  }
+  
+  #icon2M3 {
+    scale: 0.7;
+  }
+
+  #options {
+    margin-left: 10px;
+    margin-top: -30px;
+    margin-bottom: 5px;
+  }
+
+  #options2 {
+    margin-left: 30px;
+    margin-top: -25px;
+    margin-bottom: 5px;
+  }
+}
+
+/* upto 500px */
+@media only screen and (max-width: 500px) {
+  .example-form {
+    width: 120px;
+    border-radius: 7px;
+    scale: 0.7;
+    margin-left: -20px;
+  }
+
+  .r1 {
+    scale: 0.6;
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+
+  #head {
+    margin-left: -30px;
+    font-family: DancingScript;
+    scale: 0.5;
+  }
+
+  .headstart {
+    margin-left: -20px;
+    width: 165px;
+  }
+
+  #logo {
+    align-self: center;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: -10px;
+  }
+
+  .userimg {
+    scale: 0.6;
+  }
+
+  .info {
+    width: 130px;
+  }
+
+  .adminlogo {
+    scale: 0.6;
+  }
+
+  .togglebut {
+    margin-left: 0px;
+    scale: 0.6;
+  }
+
+  .card {
+    width: 120px;
+    height: 180px;
+    border-radius: 8px;
+  }
+
+  #ic1 {
+    position: absolute;
+    left: 0;
+    top: 150px;
+    color: rgb(227, 11, 92);
+    scale: 0.7;
+  }
+
+  #ic2 {
+    position: absolute;
+    left: 25px;
+    top: 150px;
+    color: #FF1E1E;
+    scale: 0.65;
+  }
+
+  .paginator-arrange {
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    scale: 0.5;
+  }
+
+  #searchimg {
+    border-radius: 10px;
+    height:200px;
+    width:120px;
+  }
+}
+
+/* upto 420px */
+@media only screen and (max-width: 420px) {
+  .example-form {
+    width: 100px;
+    scale: 0.6;
+    margin-left: -30px;
+  }
+
+  .r1 {
+    scale: 0.5;
+    margin-left: -35px;
+    margin-right: -35px;
+  }
+
+  .headstart {
+    margin-left: -25px;
+    width: 160px;
+  }
+
+  #logo {
+    align-self: center;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: -10px;
+  }
+
+  #head {
+    margin-left: -30px;
+    font-family: DancingScript;
+    scale: 0.5;
+  }
+
+  .userimg {
+    scale: 0.5;
+  }
+
+  .info {
+    margin-right: -20px;
+    width: 110px;
+  }
+
+  .adminlogo {
+    scale: 0.5;
+  }
+
+  .togglebut {
+    margin-left: 0px;
+    scale: 0.5;
+  }
+
+  .card {
+    width: 140px;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .col-xm-3 {
+    width: 50%;
+  }
+
+  #ic1 {
+    position: absolute;
+    left: 0;
+    top: 170px;
+    color: rgb(227, 11, 92);
+    scale: 0.7;
+  }
+
+  #ic2 {
+    position: absolute;
+    left: 25px;
+    top: 170px;
+    color: #FF1E1E;
+    scale: 0.65;
+  }
+
+  #header2 {
+    color: black;
+    font-family: DancingScript;
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+  #btn2{
+    scale: 0.8;
+  }
+}
+
+/* upto 370px */
+@media only screen and (max-width: 370px) {
+  .example-form {
+    width: 80px;
+    scale: 0.4;
+    margin-left: -10px;
+    margin-right: -30px;
+  }
+
+  .r1 {
+    scale: 0.4;
+  }
+
+  .headstart {
+    margin-left: -25px;
+    width: 100px;
+  }
+
+  #logo {
+    align-self: center;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: -10px;
+  }
+
+  #head {
+    margin-left: -40px;
+    font-family: DancingScript;
+    scale: 0.4;
+  }
+
+  .userimg {
+    scale: 0.4;
+  }
+
+  .info {
+    width: 100px;
+  }
+
+  .adminlogo {
+    margin-right: 0px;
+    scale: 0.4;
+  }
+
+  .togglebut {
+    margin-left: 0px;
+    scale: 0.4;
+  }
+
+  .card {
+    width: 120px;
+    height: 180px;
+    border-radius: 8px;
+  }
+
+  .container {
+    margin-top: -30px;
+  }
+
+  .paginator-arrange {
+    scale: 0.5;
+  }
+
+  #ic1 {
+    position: absolute;
+    left: 0;
+    top: 150px;
+    color: rgb(227, 11, 92);
+    scale: 0.6;
+  }
+
+  #ic2 {
+    position: absolute;
+    left: 25px;
+    top: 150px;
+    color: #FF1E1E;
+    scale: 0.55;
+  }
+}
+
+/* upto 300px */
+@media only screen and (max-width: 300px) {
+  .example-form {
+    width: 60px;
+    scale: 0.4;
+    margin-left: -10px;
+    margin-right: -30px;
+  }
+
+  .r1 {
+    scale: 0.4;
+  }
+
+  #movieCard{
+    margin-left: 30px;
+  }
+
+  #logo {
+    align-self: center;
+    height: 18px;
+    border-radius: 50%;
+    margin-left: -12px;
+  }
+
+  #head {
+    margin-left: -45px;
+    font-family: DancingScript;
+    scale: 0.35;
+  }
+
+  .userimg {
+    scale: 0.4;
+  }
+
+  .headstart {
+    margin-left: -25px;
+    width: 90px;
+  }
+
+  .info {
+    width: 100px;
+  }
+  .adminlogo {
+    scale: 0.4;
+  }
+
+  .togglebut {
+    margin-left: 0px;
+    scale: 0.3;
+  }
+
+  .card {
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .col-xm-3 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .paginator-arrange {
+    scale: 0.5;
+  }
+
+  #ic1 {
+    position: absolute;
+    left: 0;
+    top: 170px;
+    color: rgb(227, 11, 92);
+    scale: 0.6;
+  }
+
+  #ic2 {
+    position: absolute;
+    left: 25px;
+    top: 170px;
+    color: #FF1E1E;
+    scale: 0.55;
+  }
+}

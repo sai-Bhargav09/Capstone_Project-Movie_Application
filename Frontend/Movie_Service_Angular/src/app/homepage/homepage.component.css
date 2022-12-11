@@ -1,0 +1,627 @@
+@import url('https://https://fonts.googleapis.com/css?family=Dancing+Script');
+
+.example-form {
+  min-width: 150px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 7px;
+}
+
+#logo {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+
+#ch {
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#back {
+  border: 1px solid white;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  background-color: black;
+  border-radius: 15px;
+  width: 100px;
+  float: left;
+}
+
+#back2 {
+  border: 1px solid white;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  background-color: black;
+  border-radius: 15px;
+  width: 65px;
+  margin-left: 110px;
+}
+
+#icon {
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+#icon2 {
+  margin-left: 20px;
+}
+
+#btc {
+  float: left;
+}
+
+#head {
+  display: flex;
+  align-self: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headlogo {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+}
+
+#searchimg {
+  border-radius: 15px;
+}
+
+#searchimg:hover {
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.r1,
+.r2 {
+  color: white;
+  text-decoration-line: none;
+  font-weight: 500;
+  font-size: large;
+}
+
+.r1:hover {
+  font-weight: 600;
+  transition: .5s;
+}
+
+.r2:hover {
+  font-weight: 600;
+  transition: .5s;
+}
+
+.routes {
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#byGenre {
+  margin-left: 300px;
+}
+
+#support {
+  color: white;
+  text-indent: -9999px;
+  margin-top: 200px;
+}
+
+#ib {
+  margin-left: 5px;
+  margin-right: 10px;
+  color: white;
+  padding-top: 5px;
+}
+
+#ib:hover {
+  cursor: pointer;
+  color: rgb(32, 227, 32);
+  transition: .5s;
+}
+
+#chips {
+  display: flex;
+  justify-content: center;
+}
+
+#chip:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  outline: 2px solid black;
+}
+
+#movieBox {
+  border: 1px solid rgb(171, 171, 171);
+  color: black;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  margin-right: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  background-image: url("/assets/back/w2.jpg");
+
+}
+
+#descr {
+  font-family: DancingScript;
+  font-size: large;
+}
+
+.movie:hover img {
+  transform: scale(1.4);
+}
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.movie {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card:hover {
+  cursor: pointer;
+  border-color: black;
+  border: 2px solid black;
+}
+
+.card {
+  width: 230px;
+  height: 320px;
+  border-radius: 10px;
+}
+
+.movie span {
+  position: absolute;
+  left: 10px;
+  padding: 5px;
+  color: rgb(245, 245, 12);
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: black;
+  margin-top: 5px;
+}
+
+.paginator-arrange {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+}
+
+.movie h6 {
+  position: absolute;
+  right: 10%;
+  font-weight: bold;
+  color: rgb(23, 233, 65);
+  font-size: 16px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.col-lg-2 {
+  width: 20%;
+}
+
+#backImg {
+  background-image: url("/assets/back/white.jpg");
+  background-attachment: fixed;
+}
+
+#line {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgb(171, 171, 171);
+  margin-top: 30px;
+  margin-bottom: 5px;
+  margin-left: 55px;
+  margin-right: 55px;
+}
+
+/* Media Queries */
+
+/* upto 1400px */
+@media only screen and (max-width: 1400px) {
+  .example-form {
+    width: 400px;
+    border-radius: 7px;
+  }
+
+  .card {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+  }
+
+  .container {
+    margin-top: -50px;
+  }
+}
+
+/* upto 1250px */
+@media only screen and (max-width: 1250px) {
+  .example-form {
+    width: 400px;
+    border-radius: 7px;
+  }
+
+  .card {
+    width: 180px;
+    height: 280px;
+    border-radius: 10px;
+  }
+
+  .container {
+    margin-top: -50px;
+  }
+}
+
+/* upto 1000px */
+@media only screen and (max-width: 1000px) {
+  .example-form {
+    width: 250px;
+    border-radius: 7px;
+  }
+
+  .card {
+    width: 170px;
+    height: 260px;
+    border-radius: 10px;
+  }
+
+  .col-lg-2 {
+    width: 25%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .container {
+    margin-top: -50px;
+  }
+}
+
+/* upto 900px */
+@media only screen and (max-width: 900px) {
+  .example-form {
+    width: 200px;
+    border-radius: 7px;
+  }
+
+  #chips {
+    scale: 0.9;
+  }
+}
+
+/* upto 800px */
+@media only screen and (max-width: 800px) {
+  .example-form {
+    width: 180px;
+    border-radius: 7px;
+  }
+
+  .card {
+    width: 140px;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-sm-3 {
+    width: 33%;
+  }
+
+  .container {
+    margin-top: -50px;
+  }
+}
+
+/* upto 700px */
+@media only screen and (max-width: 700px) {
+  .example-form {
+    width: 150px;
+    border-radius: 7px;
+  }
+
+  #chips {
+    scale: 0.8;
+  }
+
+  .card {
+    width: 140px;
+    height: 200px;
+    border-radius: 8px;
+  }
+}
+
+/* upto 650px */
+@media only screen and (max-width: 650px) {
+  .example-form {
+    width: 100px;
+    border-radius: 7px;
+    scale: 0.9;
+  }
+
+  .routes {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    scale: 0.8;
+    margin-right: -10px;
+  }
+
+  #head {
+    margin-left: -10px;
+    font-family: DancingScript;
+    scale: 0.8;
+  }
+
+  #logo{
+    margin-left: -10px;
+    scale: 0.8;
+  }
+
+  .headlogo {
+    width: 160px;
+  }
+
+  .card {
+    width: 140px;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  #line {
+    margin-top: 15px;
+    margin-bottom: -20px;
+  }
+}
+
+/* upto 550px */
+@media only screen and (max-width: 550px) {
+  .example-form {
+    width: 150px;
+    border-radius: 7px;
+  }
+
+  .card {
+    width: 140px;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  #chips {
+    margin-left: -20px;
+    margin-right: -20px;
+    scale: 0.8;
+  }
+
+  #line {
+    margin-top: 15px;
+    margin-bottom: -20px;
+  }
+
+  .container {
+    margin-top: -50px;
+  }
+}
+
+/* upto 500px */
+@media only screen and (max-width: 500px) {
+  .example-form {
+    width: 60px;
+    border-radius: 7px;
+    scale: 0.65;
+  }
+
+  .routes {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    scale: 0.7;
+    margin-right: -20px;
+  }
+
+  #head {
+    margin-left: -20px;
+    font-family: DancingScript;
+    scale: 0.7;
+  }
+
+  #logo{
+    margin-left: 0px;
+    scale: 0.6;
+  }
+
+  .headlogo {
+    margin-left: -20px;
+    width: 120px;
+  }
+
+  #chips {
+    scale: 0.6;
+    margin-left: -70px;
+    margin-right: -70px;
+    margin-top: -10px;
+  }
+
+  #line {
+    margin-top: 10px;
+    margin-bottom: -25px;
+  }
+}
+
+/* upto 420px */
+@media only screen and (max-width: 420px) {
+  .example-form {
+    width: 130px;
+    scale: 0.6;
+  }
+
+  .routes {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    scale: 0.6;
+    margin-right: -30px;
+  }
+
+  #head {
+    margin-left: -30px;
+    font-family: DancingScript;
+    scale: 0.6;
+  }
+
+  #logo{
+    margin-left: 0px;
+    scale: 0.5;
+  }
+
+  .headlogo {
+    margin-left: -20px;
+    width: 100px;
+  }
+
+  #chips {
+    scale: 0.6;
+    margin-left: -100px;
+    margin-right: -100px;
+    margin-top: -10px;
+  }
+
+  #line {
+    margin-top: 10px;
+    margin-bottom: -25px;
+  }
+
+  .card {
+    width: 140px;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .col-xm-3 {
+    width: 50%;
+  }
+}
+
+/* upto 370px */
+@media only screen and (max-width: 370px) {
+  .example-form {
+    width: 30px;
+    scale: 0.5;
+  }
+
+  .routes {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    scale: 0.5;
+    margin-right: -30px;
+  }
+
+  #head {
+    margin-left: -40px;
+    font-family: DancingScript;
+    scale: 0.5;
+  }
+
+  #logo{
+    margin-left: 0px;
+    scale: 0.4;
+  }
+
+  .headlogo {
+    margin-left: -25px;
+    width: 80px;
+  }
+
+  #chips {
+    scale: 0.5;
+    margin-left: -120px;
+    margin-right: -120px;
+    margin-top: -12px;
+  }
+
+  #line {
+    margin-top: 8px;
+    margin-bottom: -30px;
+  }
+}
+
+/* upto 300px */
+@media only screen and (max-width: 300px) {
+  .example-form {
+    width: 25px;
+    scale: 0.5;
+  }
+
+  .routes {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    scale: 0.5;
+    margin-left: -20px;
+  }
+
+  #head {
+    margin-left: -50px;
+    font-family: DancingScript;
+    scale: 0.4;
+  }
+
+  #logo{
+    margin-left: 0px;
+    scale: 0.3;
+  }
+
+  .headlogo {
+    margin-left: -30px;
+    width: 60px;
+  }
+
+  #chips {
+    scale: 0.4;
+    margin-left: -180px;
+    margin-right: -180px;
+    margin-top: -20px;
+  }
+
+  #line {
+    margin-top: 4px;
+    margin-bottom: -40px;
+  }
+
+  .card {
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+    margin-left: 45px;
+  }
+
+  .col-xm-3 {
+    width: 100%;
+  }
+}

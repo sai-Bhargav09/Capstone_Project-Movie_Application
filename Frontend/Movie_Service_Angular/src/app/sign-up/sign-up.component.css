@@ -1,0 +1,254 @@
+@import url('https://https://fonts.googleapis.com/css?family=Dancing+Script');
+form{
+    max-width: 500px;
+    width: 800px;
+    margin: 2em auto;
+    text-align: center;
+    max-height: 600px;
+}
+#logo{
+  height: 50px;
+  border-radius: 50%;
+}
+#head{
+  margin-left: 10px;
+  font-size:x-large;
+  font-family:DancingScript;
+  font-weight: 500px;
+  }
+.width{
+    width: 400px;
+}
+#op1:hover{
+  color: gray;
+  transition: .5s;
+  font-weight: bold;
+}
+#op11:hover{
+  color: gray;
+  transition: .5s;
+  font-weight: bold;
+}
+#op3:hover{
+  color: gray;
+  transition: .5s;
+  font-weight: bold;
+}
+#op13:hover{
+  color: gray;
+  transition: .5s;
+  font-weight: bold;
+}
+#op2:hover{
+  color: gray;
+  transition: .5s;
+  font-weight: bold;
+}
+#op12:hover{
+  color: gray;
+  transition: .5s;
+  font-weight: bold;
+}
+
+#op11,#op12,#op13
+{
+  color: black;
+  text-decoration-line: none;
+  font-size:larger;
+  margin-left: 5px;
+}
+#op1,#op2,#op3
+{
+  color: black;
+  text-decoration-line: none;
+  margin-left: 30px;
+  margin-right: 50px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+#op3
+{
+  margin-top: 20px;
+}
+.ic{
+    padding-top: 4px;
+    padding-bottom: 5px;
+}
+#mainC
+{
+  background-color: rgba(47,47,47,255);
+}
+#support{
+    margin-top: 100px;
+}
+#supp{
+  margin-top: 550px;
+  color: white;
+}
+#userImg{
+    float: left;
+    margin-right: 2px;
+    margin-left: 26px;
+}
+#backImg{
+  background-image: url("/assets/back/white.jpg");
+  background-size: 1380px;
+  height: 700px;
+}
+#backImg2{
+  background-image: url("/assets/back/white.jpg");
+  background-attachment: fixed;
+  background-size: 1300px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 650px) {
+  #userImg {
+    float: left;
+    margin-left: 22px;
+  }
+
+  #userImg img {
+    width: 35px;
+  }
+
+  #draw {
+    width: 150px;
+  }
+
+  .width {
+    width: 350px;
+    margin-left: -100px;
+  }
+
+  .header {
+    margin-left: -100px;
+  }
+
+  #head {
+    scale: 0.8;
+    margin-left: -10px;
+  }
+
+  #signBtn {
+    margin-left: -100px;
+  }
+
+  #op1,#op2,#op3
+{
+  margin-left: 25px;
+}
+
+  #op11,
+  #op12,
+  #op13 {
+    color: black;
+    text-decoration-line: none;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  #userImg {
+    float: left;
+    margin-left: 19px;
+  }
+
+  #userImg img {
+    width: 20px;
+    height: 35px;
+  }
+
+  #draw {
+    width: 120px;
+  }
+
+  .width {
+    width: 250px;
+    margin-left: -200px;
+  }
+
+  .header {
+    margin-left: -220px;
+  }
+
+  #head {
+    scale: 0.8;
+    margin-left: -10px;
+  }
+
+  #signBtn {
+    margin-left: -220px;
+  }
+
+  #op1,#op2,#op3
+  {
+    margin-left: 20px;
+    margin-right: -20px;
+  }
+
+  #op11,
+  #op12,
+  #op13 {
+    color: black;
+    text-decoration-line: none;
+    font-size: 10px;
+  }
+
+  .ic {
+    padding-top: 4px;
+    padding-bottom: 5px;
+    margin-left: -10px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  #userImg {
+    float: left;
+    margin-left: 14px;
+  }
+
+  #userImg img {
+    width: 15px;
+    height: 30px;
+  }
+
+  #draw {
+    width: 100px;
+  }
+
+  .width {
+    width: 200px;
+    margin-left: -250px;
+  }
+
+  .header {
+    margin-left: -270px;
+    scale: 0.8;
+    margin-bottom: 0;
+  }
+
+  #head {
+    scale: 0.8;
+    margin-left: -10px;
+  }
+
+  #signBtn {
+    margin-left: -270px;
+  }
+
+  #op11,
+  #op12,
+  #op13 {
+    color: black;
+    text-decoration-line: none;
+    font-size: 10px;
+  }
+
+  .ic {
+    padding-top: 4px;
+    padding-bottom: 5px;
+    margin-left: -15px;
+  }
+}

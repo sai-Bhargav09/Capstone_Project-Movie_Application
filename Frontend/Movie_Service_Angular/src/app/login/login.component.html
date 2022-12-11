@@ -1,0 +1,59 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <img id="logo" src="assets/logo/moviesflix.png" alt="Avatar">
+        <h1 id="head">MOVIES FLIX</h1>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+    <mat-drawer id="draw" mode="side" opened>
+        <!-- drawer content -->
+        <div id="backImg2">
+
+        <div id="op3"><mat-icon class="ic">home</mat-icon><a id="op13" routerLink="" matTooltip="Go to home page">Home</a></div><br>
+        <div id="op1"><mat-icon class="ic">person</mat-icon><a id="op11" routerLink="/login" matTooltip="Login">Log in</a></div><br>
+        <div id="op2"><mat-icon class="ic">person_add</mat-icon><a id="op12" routerLink="/signup" matTooltip="Create new account">Sign up</a></div>
+
+        <div id="supp">d</div>
+    </div>
+
+        <!-- drawer content -->
+    </mat-drawer>
+
+    
+    <mat-drawer-content>
+        <div id="backImg">
+
+        <form (ngSubmit)="login()" name="loginForm" [formGroup]="loginForm">
+            <div class="header">
+                <h2>Log in</h2>
+            </div>
+            <div class="email-input">
+                <mat-form-field  class="full-width" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput required>
+                    <mat-error *ngIf="loginForm.get('email')?.errors">
+                        Email is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div>
+                <!-- <span class="aLink">Forgot Password</span> -->
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input type="password" formControlName="password" matInput required>
+                    <mat-error *ngIf="loginForm.get('password')?.errors">
+                        Password is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <br>
+            <button id="logBtn" mat-flat-button color="primary" matTooltip="Login">Login</button>    
+        </form>
+        <div id="support">s</div>
+
+    </div>
+</mat-drawer-content>
+        
+        <router-outlet></router-outlet>
+ 

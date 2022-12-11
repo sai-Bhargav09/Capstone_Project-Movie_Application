@@ -1,0 +1,111 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row class="header">
+      <div class="headlogo">
+        <img id="logo" src="assets/logo/moviesflix.png" alt="Avatar">
+        <h1 id="head">Play Movies</h1>
+      </div>
+  
+      <a class="r1" matTooltip="Go to Home Page" (click)="goBack()">
+        <mat-icon style="padding-top: 3px ; padding-left:3px">arrow_back_ios</mat-icon>
+      </a>
+  
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  <div id="backImg">
+  
+      <div class="row">
+        <div class="videocon">
+          <div *ngIf="isVideoEnabled">
+            <iframe id="youtube" [src]="getmovie()" allowfullscreen></iframe>
+          </div>
+  
+          <div id="desc3">
+            <p><strong>Description :</strong> {{tmdbID[0].overview}}</p>
+          </div>
+        </div>
+      </div>
+  
+    <div id="chipM">
+      <mat-chip-list aria-label="Fish selection">
+        <br>
+        <mat-chip id="chip">Duration : {{tmdbID[0].runtime}} min</mat-chip>
+        <mat-chip id="chip">Rating : {{tmdbID[0].vote_average.toFixed(1)}}</mat-chip>
+        <br><br><br><br><br>
+        <mat-chip id="chip" (click)="moreLikeThis()">
+          <mat-icon>keyboard_arrow_down</mat-icon>Recommended
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+  
+    <section class="recommended">
+      <div class="container">
+        <div class="slider-wrap">
+          <div class="slider-main">
+            <div class="card movie" *ngFor="let s of moreMovies">
+              <img matTooltip="{{s.title}}" class="card-img-top" [routerLink]="['/tmdbvideo',s.id]"
+                src="https://www.themoviedb.org/t/p/w440_and_h660_face{{s.poster_path}}">
+              <span class="fa fa-star checked card-span-top">&nbsp;&nbsp;{{s.vote_average.toFixed(1)}}</span>
+              <h6>{{s.backdrop_path}}</h6>
+            </div>
+          </div>
+        </div>
+  
+        <div class="button-area" *ngIf="flag">
+          <button type="button" class="prev" appPrevious matTooltip="Previous">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+          </button>
+          <button type="button" class="next" appNext matTooltip="Next">
+            <mat-icon>keyboard_arrow_right</mat-icon>
+          </button>
+        </div>
+  
+      </div>
+    </section>
+  
+    <!-- <div *ngIf="playtmdb">
+      <iframe [src]="getmovie1()" style="height:200px ;width:350px;margin-left: 200px;" allowfullscreen></iframe>
+    </div> -->
+  
+  </div>
+  
+  
+  <!--   
+    <div class="container mt-2 text-center" *ngIf="isVideoEnabled">
+      <iframe [src]="getmovie()" allowfullscreen></iframe>
+    </div>
+  
+    <div class="container" >
+    <mat-chip-list aria-label="Fish selection" >
+      <br>
+      <p class="text-justify"><strong>Description :</strong> {{tmdbID[0].overview}}</p>
+      <br>
+      <mat-chip id="chip">Duration : {{tmdbID[0].runtime}} min</mat-chip>
+      <mat-chip id="chip">Rating : {{tmdbID[0].vote_average.toFixed(1)}}</mat-chip> 
+      <br><br><br><br><br>
+      <button mat-raised-button color="accent" (click)="moreLikeThis()" matTooltip="Recommended movies">Recommended</button>
+    </mat-chip-list>
+  </div>
+  <br><br>
+  
+    <br><br>
+  
+  <section class="recommended">
+    <div class="container">
+      <div class="slider-wrap">
+        <div class="slider-main">
+          <div class="card movie" *ngFor="let s of moreMovies">
+            <img matTooltip="{{s.title}}" class="card-img-top" [routerLink]="['/tmdbvideo',s.id]" src="https://www.themoviedb.org/t/p/w440_and_h660_face{{s.poster_path}}">
+            <span class="fa fa-star checked card-span-top">&nbsp;&nbsp;{{s.vote_average.toFixed(1)}}</span>
+            <h6>{{s.backdrop_path}}</h6>
+          </div>
+        </div>
+      </div>
+  
+      <div class="button-area" *ngIf="flag">
+        <button type="button" class="prev" appPrevious matTooltip="Previous"> < </button>
+        <button type="button" class="next" appNext matTooltip="Next"> > </button>
+      </div>
+  
+    </div>
+  </section> -->

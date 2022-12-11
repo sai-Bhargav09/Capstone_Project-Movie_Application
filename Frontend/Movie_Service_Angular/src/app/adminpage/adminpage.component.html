@@ -1,0 +1,123 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="header">
+    <div class="headlogo">
+      <img id="logo" src="assets/logo/moviesflix.png" alt="Avatar">
+      <h1 id="head">MOVIES FLIX</h1>
+    </div>
+    <!-- search -->
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label></mat-label>
+        <input type="text" matTooltip="Search Movies" placeholder="Enter movie name" matInput [formControl]="myControl"
+          [matAutocomplete]="auto" #memory>
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <a mat-list-item (click)="searchResult(memory.value)">
+        <mat-icon id="ib" fontIcon="search" matTooltip="Search" style="cursor: pointer;"></mat-icon>
+      </a>
+    </form>
+
+    <div class="headlast">
+      <div class="headlastfirst">
+        <mat-icon id="secIcon">security</mat-icon>
+        <a class="r1">&nbsp;Admin rights</a>
+      </div>
+
+      <a class="r11" routerLink="/dashboard" matTooltip="Go To Dashboard">
+        <mat-icon style="padding-top: 3px;">dashboard</mat-icon>Dashboard
+      </a>
+    </div>
+
+    <!-- <mat-icon routerLink="/dashboard" style="margin-left:10px ;">home</mat-icon> -->
+
+
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- side nav container -->
+<mat-sidenav-container>
+
+  <!-- side nav content -->
+  <mat-sidenav #sidenav mode="side">
+  </mat-sidenav>
+  <!-- side nav content -->
+
+  <!-- main content -->
+  <mat-sidenav-content>
+    <mat-spinner *ngIf="updating"></mat-spinner>
+
+    <div id="backImg" *ngIf="loading"><br>
+
+      <div id="badge" class="demo-section">
+        <button mat-raised-button color="primary" (click)="reportedVisibility()" matBadge="{{reportedMovieUnit}}"
+          matBadgePosition="before" matBadgeColor="accent">
+          Reported Movies
+        </button>
+      </div>
+
+      <div id="chips">
+        <mat-chip-list aria-label="Fish selection" *ngFor="let i of allReportedMoviesData">
+          <mat-chip id="chip">{{i._id}}</mat-chip>
+        </mat-chip-list>
+      </div>
+
+
+      <br>
+      <table class="table" *ngIf="showReportedMovies">
+        <thead>
+          <tr>
+            <th id="c" scope="col">ID</th>
+            <th id="c" scope="col">Name</th>
+            <th id="c" scope="col">Duration</th>
+            <th id="c" scope="col">Genre</th>
+            <th id="c" scope="col">Rating</th>
+            <!-- <th id="c" scope="col" style="padding-left: 20px;">Update</th> -->
+            <th id="c" scope="col" style="padding-left: 20px;">Remove</th>
+          </tr>
+        </thead>
+        <tbody style="width: 50%;" *ngFor="let i of sortedData">
+          <tr id="c" class="c">
+            <td id="c">{{i.movieId}}</td>
+            <td id="c" style="font-weight:bold;">{{i.movieName}}</td>
+            <td id="c">{{i.duration}}</td>
+            <td id="c">{{i.genre}}</td>
+            <td id="c">{{i.rating}}</td>
+            <!-- <td id="c">
+              <button id="cs" class="tablebtns" mat-flat-button (click)="updateMovieButton(i)"
+                matTooltip="Update movies data">Update</button>
+            </td> -->
+            <td id="c"><button id="cs" class="tablebtns" mat-flat-button (click)="deleteMovie(i)"
+                matTooltip="Remove from database">Remove</button></td>
+          </tr>
+        </tbody>
+        <br>
+        <button id="cs" mat-flat-button (click)="removeAllReportedData()"
+          matTooltip="click to remove reported movies">Remove
+          reported movies</button>
+      </table>
+
+      <div style="margin-top: 30px;" *ngFor="let i of searchData">
+        <div class="row" id="movieBox">
+          <h1>Movie : {{i.movieName | uppercase}}</h1>
+          <h2>{{i.rating}} | {{i.genre}} | {{i.duration}}</h2>
+          <div class="col-lg-3"><img id="searchimg" src="{{imageUrlForSearch}}" [routerLink]="['/video',i.movieId]"
+              alt="error" height="360px" width="260px"></div>
+          <div class="col-lg-9">
+            <div id="descr">{{i.description}}</div>
+          </div>
+          <button style="margin-top: 10px;" mat-flat-button color="primary" (click)="removeSearch()"
+            matTooltip="close Serach">Close</button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- main content -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

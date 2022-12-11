@@ -1,0 +1,129 @@
+<br>
+<button style="margin-left:1300px" color="primary" mat-flat-button (click)="redirectToDashboard()"
+  matTooltip="back to dashboard">&nbsp;Dashboard&nbsp;</button><br><br>
+<button style="margin-left:1300px" color="primary" mat-flat-button (click)="addMovieButton()"
+  matTooltip="back to dashboard">Add Movies</button>
+<br><br>
+
+<div id="addForm" class="upBack" *ngIf="addFormVisibility">
+  
+  <h2 style="color: black;"><mat-icon>add</mat-icon>ADDING MOVIE</h2>
+
+  <p>
+
+    <mat-form-field>
+      <mat-label style="color: black;">Movie Id</mat-label>
+      <input id="inpA" style="color: black;" matInput placeholder="movie Id" #amovieid>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label style="color: black;">Movie Name</mat-label>
+      <input id="inpA" style="color: black;" matInput placeholder="movie name" #amoviename>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label style="color: black;">Duration</mat-label>
+      <input id="inpA" style="color: black;" matInput placeholder="duration" #aduration>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label style="color: black;">Thumbnail</mat-label>
+      <input id="inpA" style="color: black;" matInput placeholder="thumbnail" #athumbnail>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label style="color: black;">Select genre</mat-label>
+      <mat-select #agenre>
+        <mat-option value="romantic">Romantic</mat-option>
+        <mat-option value="comedy">Comedy</mat-option>
+        <mat-option value="adventure">Adventure</mat-option>
+        <mat-option value="SciFi">Sci-Fi</mat-option>
+        <mat-option value="thriller">Thriller</mat-option>
+        <mat-option value="action">Action</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label style="color: black;">Source URL</mat-label>
+      <input id="inpA" style="color: black;" matInput placeholder="source url" #asourceurl>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label style="color: black;">Ratings</mat-label>
+      <input id="inpA" style="color: black;" matInput placeholder="rating" #arate>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label style="color: black;">Description</mat-label>
+      <input id="inpA" style="color: black;" matInput placeholder="description" #adesc>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label style="color: black;">TMDB Id</mat-label>
+      <input id="inpA" style="color: black;" matInput placeholder="tmdb id" #atmdbid>
+    </mat-form-field>
+
+
+  </p>
+  <button id="mainUpd" mat-flat-button color="primary"
+    (click)="addMovie(amovieid.value,amoviename.value,aduration.value,athumbnail.value,agenre.value,asourceurl.value,arate.value,adesc.value,atmdbid.value)">Add</button>
+</div>
+
+
+
+<div id="updateForm" class="upBack" *ngIf="updateFormVisibility">
+  <h2 style="color: black;">Movie : {{updateMovieName}} | {{updateMovieId}}</h2>
+  <mat-form-field>
+    <mat-label style="color: black;">Select genre</mat-label>
+    <mat-select #ugenre>
+      <mat-option value="romantic">Romantic</mat-option>
+      <mat-option value="comedy">Comedy</mat-option>
+      <mat-option value="adventure">Adventure</mat-option>
+      <mat-option value="SciFi">Sci-Fi</mat-option>
+      <mat-option value="thriller">Thriller</mat-option>
+      <mat-option value="action">Action</mat-option>
+    </mat-select>
+    <mat-icon matSuffix>movie</mat-icon>
+  </mat-form-field>
+  <p>
+    <mat-form-field>
+      <mat-label style="color: black;">Ratings</mat-label>
+      <input style="color: black;" matInput placeholder="in numbers" #rate>
+      <mat-icon matSuffix>star_border</mat-icon>
+    </mat-form-field>
+  </p>
+  <button id="mainUpd" mat-flat-button color="primary" (click)="updateMovie(rate.value,ugenre.value)">Update</button>
+</div>
+
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th id="c" scope="col">ID</th>
+      <th id="c" scope="col">Name</th>
+      <th id="c" scope="col">Duration</th>
+      <th id="c" scope="col">Genre</th>
+      <th id="c" scope="col">Rating</th>
+      <!-- <th id="c" scope="col">Thumbnail</th> -->
+      <th id="c" scope="col" style="padding-left: 20px;">Update</th>
+      <th id="c" scope="col" style="padding-left: 20px;">Remove</th>
+    </tr>
+  </thead>
+  <tbody style="width: 50%;" *ngFor="let i of allMoviesData">
+    <tr id="c" class="c">
+      <td id="c">{{i.movieId}}</td>
+      <td id="c" style="font-weight: bold;">{{i.movieName}}</td>
+      <td id="c">{{i.duration}}</td>
+      <td id="c">{{i.genre}}</td>
+      <td id="c">{{i.rating}}</td>
+      <!-- <td id="c"><img [src]={{thumbnail}} alt="error" width="" height=""></td> -->
+      <td id="c">
+        <button id="cs" class="tablebtns" mat-flat-button (click)="updateMovieButton(i)"
+          matTooltip="Update movies data">Update</button>
+      </td>
+      <td id="c"><button id="cs" class="tablebtns" mat-flat-button (click)="deleteMovie(i)"
+          matTooltip="Remove from database">Remove</button></td>
+    </tr>
+  </tbody>
+</table>
+<br><br><br>

@@ -1,0 +1,17 @@
+
+.type{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.message{
+    text-align: center;
+    letter-spacing: 1px;
+}
+#btnn{
+    margin-left: 40px;
+    background-color: white;
+    color: rgb(227, 11, 92);
+}

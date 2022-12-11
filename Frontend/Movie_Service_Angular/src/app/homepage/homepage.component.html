@@ -1,0 +1,92 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="header">
+    <div class="headlogo">
+    <img id="logo" src="assets/logo/moviesflix.png" alt="Avatar">
+    <h1 id="head">MOVIES FLIX</h1>
+  </div>
+
+    <!-- search -->
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label></mat-label>
+        <input type="text" matTooltip="Search Movies" placeholder="Enter movie name" matInput [formControl]="myControl"
+          [matAutocomplete]="auto" #memory>
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <!-- <mat-icon id="ib" (click)="checking(memory.value)" matTooltip="search">search</mat-icon> -->
+      <a mat-list-item (click)="searchResult(memory.value)">
+        <mat-icon id="ib" fontIcon="search" matTooltip="Search"></mat-icon>
+      </a>
+    </form>
+
+    <div class="routes">
+      <a class="r1" routerLink="/login" matTooltip="Click here to logged in">Log in</a>
+      <a class="r2" routerLink="/signup" matTooltip="Create new account">Sign up</a>
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer id="draw" mode="side" opened>
+    <!-- drawer content -->
+
+
+    <!-- drawer content -->
+  </mat-drawer>
+  <mat-drawer-content>
+    <div id="backImg">
+      <br>
+
+      <div id="chips">
+        <h4></h4>
+        <mat-chip-list aria-label="Fish selection">
+          <mat-chip style="background-color:rgba(233,30,99,255);" id="chip" (click)="getAllGenre()" color="primary"
+            selected>All</mat-chip>
+          <mat-chip id="chip" (click)="getRomanticMovie()">Romantic</mat-chip>
+          <mat-chip id="chip" (click)="getComedyMovie()">Comedy</mat-chip>
+          <mat-chip id="chip" (click)="getThrillerMovie()">Thriller</mat-chip>
+          <mat-chip id="chip" (click)="getScifiMovie()">Sci-Fi</mat-chip>
+          <mat-chip id="chip" (click)="getAdventureMovie()">Adventure</mat-chip>
+          <mat-chip id="chip" (click)="getActionMovie()">Action</mat-chip>
+        </mat-chip-list>
+      </div>
+
+      <!-- <hr id="line"> -->
+
+      <div id="line"></div>
+
+      <div style="margin-top: 30px;" *ngFor="let i of searchData">
+        <div class="row" id="movieBox">
+          <h1>Movie : {{i.movieName | uppercase}}</h1>
+          <h2>{{i.rating}} | {{i.genre}} | {{i.duration}}</h2>
+          <div class="col-lg-3"><img id="searchimg" src="{{imageUrlForSearch}}" [routerLink]="['/video',i.movieId]"
+              alt="error" height="360px" width="260px"></div>
+          <div class="col-lg-9">
+            <div id="descr">{{i.description}}</div>
+          </div>
+          <button style="margin-top: 10px;" mat-flat-button color="primary" (click)="removeSearch()"
+            matTooltip="close Serach">Close</button>
+        </div>
+      </div>
+
+      <div style="margin-top:30px ;" class="container">
+        <div class="row my-3 gy-3">
+          <div id="movieCard" *ngFor="let s of moviesByGenre" class="col-lg-2 col-md-3 col-sm-3 col-xm-3">
+            <div class="card movie">
+              <img matTooltip="{{s.movieName}}" class="card-img-top" [routerLink]="['/video',s.movieId]"
+                src="{{s.thumbnail}}">
+              <span class="fa fa-star checked card-span-top">&nbsp;{{s.rating}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="support">d</div>
+    </div>
+
+
+    <router-outlet></router-outlet>

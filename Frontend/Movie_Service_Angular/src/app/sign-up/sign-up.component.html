@@ -1,0 +1,125 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <img id="logo" src="assets/logo/moviesflix.png" alt="Avatar">
+        <h1 id="head">MOVIES FLIX</h1>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+    <mat-drawer id="draw" mode="side" opened>
+        <!-- drawer content -->
+        <div id="backImg2">
+
+        <div id="op3">
+            <mat-icon class="ic">home</mat-icon><a id="op13" routerLink="" matTooltip="Go to home page">Home</a>
+        </div><br>
+        <div id="op1">
+            <mat-icon class="ic">person</mat-icon><a id="op11" routerLink="/login" matTooltip="Login">Log in</a>
+        </div><br>
+        <div id="op2">
+            <mat-icon class="ic">person_add</mat-icon><a id="op12" routerLink="/signup" matTooltip="Create new account">Sign up</a>
+        </div>
+
+        <div id="supp">w</div>
+
+    </div>
+
+        <!-- drawer content -->
+    </mat-drawer>
+    <mat-drawer-content>
+        <div id="backImg">
+
+        <form [formGroup]="signUpForm" (ngSubmit)="register()">
+            <div class="header">
+                <h2>Sign up</h2>
+            </div>
+            <mat-form-field class="width" appearance="outline">
+                <mat-label>UserName</mat-label>
+                <input matInput placeholder="username" formControlName="userName" />
+                <mat-hint
+                    *ngIf="signUpForm.get('userName')?.hasError('required') && (signUpForm.get('userName')?.dirty || signUpForm.get('userName')?.touched)">
+                    UserName is Mandatory</mat-hint>
+                <mat-hint *ngIf="signUpForm.get('userName')?.hasError('maxlength')">Maximum limit is 15 charactors.
+                </mat-hint>
+            </mat-form-field>
+
+            <br />
+
+            <mat-form-field class="width" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="abc@gmail.com" formControlName="email" />
+                <mat-hint align="end"
+                    *ngIf="signUpForm.get('email')?.hasError('required') && (signUpForm.get('email')?.dirty || signUpForm.get('email')?.touched)">
+                    Email is Mandatory</mat-hint>
+                <mat-hint align="end" *ngIf="signUpForm.get('email')?.hasError('email')">entered format is wrong
+                </mat-hint>
+            </mat-form-field>
+            <br />
+
+
+            <mat-form-field class="width" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" type="password" formControlName="password" />
+                <mat-hint align="end"
+                    *ngIf="signUpForm.get('password')?.hasError('required') && (signUpForm.get('password')?.dirty || signUpForm.get('password')?.touched)">
+                    Password is Mandatory</mat-hint>
+                <mat-hint align="end" *ngIf="signUpForm.get('password')?.hasError('passwordValidate')">Password criteria
+                    error
+                </mat-hint>
+            </mat-form-field>
+            <br />
+
+
+            <mat-form-field class="width" appearance="outline">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput placeholder="Password" type="password" formControlName="confirmPassword" />
+                <mat-hint align="end"
+                    *ngIf="signUpForm.get('confirmPassword')?.hasError('required') && (signUpForm.get('confirmPassword')?.dirty || signUpForm.get('confirmPassword')?.touched)">
+                    Password is Mandatory</mat-hint>
+                <mat-hint align="end" *ngIf="signUpForm.get('confirmPassword')?.hasError('MustMatch')">Password didn't
+                    match
+                </mat-hint>
+            </mat-form-field>
+            <br />
+
+
+
+            <mat-form-field class="width" appearance="outline">
+                <mat-label>Mobile No.</mat-label>
+                <input matInput placeholder="Mobile" formControlName="phoneNo" />
+                <mat-hint align="end"
+                    *ngIf="signUpForm.get('phoneNo')?.hasError('required') && (signUpForm.get('phoneNo')?.dirty || signUpForm.get('phoneNo')?.touched)">
+                    Mobile Number is Mandatory</mat-hint>
+                <mat-hint align="end" *ngIf="signUpForm.get('phoneNo')?.hasError('pattern')">Please enter 10 digit
+                    Mobile Number
+                </mat-hint>
+            </mat-form-field>
+            <br />
+
+
+            <mat-form-field class="width" appearance="fill">
+                <mat-label>Date of Birth</mat-label>
+                <input matInput [max]="maxDate" [matDatepicker]="picker" formControlName="dateOfBirth">
+                <mat-hint align="end"
+                    *ngIf="signUpForm.get('dateOfBirth')?.hasError('required') && (signUpForm.get('dateOfBirth')?.dirty ||signUpForm.get('dateOfBirth')?.touched)">
+                    Date of Birth is Mandatory</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <br><br>
+          
+            <div *ngFor="let i of images">
+                <button type="button" id="userImg" (click)="addUserImage(i)"><img [src]="i" alt="The Image"
+                        height="50" /></button>
+            </div>
+            <br><br><br><br><br>
+            <button id="signBtn" type="submit" mat-raised-button color="primary"
+                [disabled]="signUpForm.invalid" matTooltip="register yourself">Register</button><br>
+
+
+        </form>
+
+
+        <div id="support"></div>
+    </div>
+        <router-outlet></router-outlet>

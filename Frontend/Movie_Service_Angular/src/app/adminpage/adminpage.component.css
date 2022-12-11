@@ -1,0 +1,690 @@
+@import url('https://https://fonts.googleapis.com/css?family=Dancing+Script');
+
+#head {
+    font-size: x-large;
+    font-family: DancingScript;
+    display: flex;
+    align-self: center;
+}
+
+#logo {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headlogo {
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+}
+
+.headlast {
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+}
+
+.headlastfirst {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+}
+
+.example-form {
+    width: 400px;
+    border-radius: 7px;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+#ib {
+    margin-left: 5px;
+    margin-right: 10px;
+    color: white;
+    padding-top: 5px;
+}
+
+.r1 {
+    color: white;
+    font-family: DancingScript;
+    text-decoration: none;
+}
+
+.r11 {
+    text-decoration-line: none;
+    color: white;
+    font-family: DancingScript;
+}
+
+/* #chips {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 1050px;
+} */
+
+#chip {
+    margin-left: 10px;
+}
+
+#chips {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #chip:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    outline: 2px solid black;
+  }
+
+#divider {
+    border-top: 1px solid black;
+}
+
+#divider2 {
+    border-top: 1px solid black;
+    width: 0px;
+}
+
+#c {
+    color: black;
+    text-transform: uppercase;
+}
+
+#cs {
+    outline: 1px solid black;
+}
+
+.table {
+    margin-left: 160px;
+    width: 1200px;
+}
+
+#updateForm {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 168px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    width: 330px;
+}
+
+.example-card {
+    max-width: 600px;
+    margin-bottom: 8px;
+}
+
+#movieBox {
+    border: 1px solid rgb(171, 171, 171);
+    color: black;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    background-image: url("/assets/back/w2.jpg");
+}
+
+#descr {
+    font-family: DancingScript;
+    font-size: large;
+}
+
+.upBack {
+    background-image: url("/assets/back/white.jpg");
+}
+
+#badge {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#searchimg {
+    border-radius: 15px;
+}
+
+#searchimg:hover {
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#backImg {
+    /* background-image: url("/assets/back/nordwood.jpg"); */
+    background-image: url("/assets/back/white.jpg");
+    background-attachment: fixed;
+}
+
+/* @Media Queries */
+
+/* upto 1400px */
+@media only screen and (max-width: 1400px) {
+    .example-form {
+        width: 380px;
+        border-radius: 7px;
+    }
+
+    .table {
+        margin-left: 160px;
+        width: 1050px;
+    }
+}
+
+/* upto 1300px */
+@media only screen and (max-width: 1300px) {
+    .example-form {
+        width: 380px;
+        border-radius: 7px;
+    }
+
+    .table {
+        margin-left: 150px;
+        width: 950px;
+    }
+}
+
+/* upto 1200px */
+@media only screen and (max-width: 1200px) {
+    .example-form {
+        width: 360px;
+        border-radius: 7px;
+        scale: 0.9;
+    }
+
+    .table {
+        margin-left: 140px;
+        width: 850px;
+    }
+}
+
+/* upto 1100px */
+@media only screen and (max-width: 1100px) {
+    .example-form {
+        width: 320px;
+        border-radius: 7px;
+        scale: 0.9;
+    }
+
+    #badge {
+        scale: 0.9;
+        margin-right: -50px;
+    }
+
+    .headlast {
+        width: 240px;
+    }
+
+    #logo {
+        height: 30px;
+        border-radius: 50%;
+    }
+
+    .headlogo {
+        width: 140px;
+    }
+
+    .headlastfirst {
+        width: 130px;
+    }
+
+    .table {
+        margin-left: 120px;
+        width: 750px;
+        font-size: 15px;
+    }
+
+    #secIcon {
+        scale: 0.9;
+    }
+
+    #head {
+        font-size: 15px;
+        font-family: DancingScript;
+    }
+
+    .r1 {
+        scale: 0.9;
+    }
+
+    .r11 {
+        scale: 0.9;
+    }
+}
+
+/* upto 1000px */
+@media only screen and (max-width: 1000px) {
+    .example-form {
+        width: 300px;
+        border-radius: 7px;
+        scale: 0.9;
+    }
+
+    .table {
+        margin-left: 120px;
+        width: 600px;
+        font-size: 12px;
+    }
+
+    .tablebtns {
+        font-size: 12px;
+    }
+
+    #secIcon {
+        scale: 0.8;
+    }
+
+    #head {
+        margin-left: 5px;
+        font-size: 15px;
+        font-family: DancingScript;
+    }
+}
+
+/* upto 870px */
+@media only screen and (max-width: 870px) {
+    .example-form {
+        width: 250px;
+        border-radius: 7px;
+        scale: 0.9;
+    }
+
+    #badge {
+        scale: 0.9;
+        margin-right: -50px;
+    }
+
+    .table {
+        margin-left: 100px;
+        width: 600px;
+        font-size: 12px;
+    }
+
+    .tablebtns {
+        font-size: 12px;
+    }
+
+    #secIcon {
+        scale: 0.8;
+    }
+
+    #head {
+        margin-left: 5px;
+        font-size: 15px;
+        font-family: DancingScript;
+    }
+
+    .headlast {
+        width: 225px;
+    }
+
+    #secIcon {
+        scale: 0.9;
+    }
+
+    .headlastfirst {
+        width: 130px;
+    }
+
+    .r1 {
+        scale: 0.8;
+    }
+
+    .r11 {
+        scale: 0.8;
+    }
+}
+
+/* upto 770px */
+@media only screen and (max-width: 770px) {
+    .example-form {
+        width: 180px;
+        border-radius: 7px;
+        scale: 0.8;
+    }
+
+    #badge {
+        scale: 0.8;
+        margin-right: -60px;
+    }
+
+    .table {
+        margin-left: 70px;
+        width: 500px;
+        font-size: 12px;
+    }
+
+    .tablebtns {
+        font-size: 12px;
+    }
+
+    #head {
+        margin-left: -35px;
+        font-size: 12px;
+        font-family: DancingScript;
+    }
+
+    .headlogo {
+        width: 120px;
+    }
+
+    .headlast {
+        width: 220px;
+    }
+
+    #secIcon {
+        scale: 0.9;
+    }
+
+    .headlastfirst {
+        margin-right: -20px;
+        width: 130px;
+    }
+
+    .r1 {
+        scale: 0.7;
+
+    }
+
+    .r11 {
+        scale: 0.7;
+    }
+}
+
+/* upto 650px */
+@media only screen and (max-width: 650px) {
+    .example-form {
+        width: 180px;
+        border-radius: 7px;
+        scale: 0.7;
+    }
+
+    .table {
+        margin-left: 60px;
+        width: 400px;
+        font-size: 12px;
+    }
+
+    .tablebtns {
+        font-size: 12px;
+    }
+
+    #secIcon {
+        margin-right: -25px;
+        scale: 0.7;
+    }
+
+    #head {
+        margin-left: -5px;
+        font-size: 12px;
+        font-family: DancingScript;
+    }
+
+    .headlast {
+        margin-right: 2px;
+        width: 170px;
+    }
+
+    .headlogo {
+        width: 120px;
+    }
+
+    .headlastfirst {
+        margin-right: 0px;
+        width: 110px;
+    }
+
+    .r1 {
+        scale: 0.6;
+    }
+
+    .r11 {
+        margin-left: -30px;
+        scale: 0.6;
+    }
+}
+
+/* upto 600px */
+@media only screen and (max-width: 600px) {
+    .table {
+        margin-left: 40px;
+        width: 250px;
+        font-size: 10px;
+    }
+
+    .tablebtns {
+        font-size: 10px;
+    }
+
+    #updateForm {
+        scale: 0.9;
+    }
+}
+
+/* upto 520px */
+@media only screen and (max-width: 520px) {
+    .example-form {
+        width: 120px;
+        border-radius: 7px;
+        scale: 0.6;
+    }
+
+    #badge {
+        scale: 0.6;
+        margin-right: -120px;
+    }
+
+    .table {
+        margin-left: 10px;
+        width: 120px;
+        font-size: 9px;
+    }
+
+    .tablebtns {
+        font-size: 9px;
+    }
+
+    #secIcon {
+        margin-right: -35px;
+        scale: 0.6;
+    }
+
+    #head {
+        margin-left: -10px;
+        font-size: 10px;
+        font-family: DancingScript;
+    }
+
+    .headlast {
+        margin-right: 70px;
+        width: 85px;
+    }
+
+    .headlogo {
+        width: 100px;
+    }
+
+    .headlastfirst {
+        width: 125px;
+    }
+
+    .r1 {
+        scale: 0.5;
+    }
+
+    .r11 {
+        scale: 0.5;
+    }
+
+    #updateForm {
+        scale: 0.8;
+    }
+}
+
+/* upto 460px */
+@media only screen and (max-width: 460px) {
+    .example-form {
+        min-width: 30px;
+        max-width: 120px;
+        width: 100%;
+        border-radius: 5px;
+        margin-left: -10px;
+        scale: 0.6;
+    }
+
+    #badge {
+        margin-top: -50px;
+        margin-left: 300px;
+        scale: 0.6;
+    }
+
+    .table {
+        margin-left: 5px;
+        width: 80px;
+        font-size: 8px;
+    }
+
+    .tablebtns {
+        font-size: 8px;
+    }
+
+    #secIcon {
+        margin-left: -5px;
+        margin-right: 2px;
+        scale: 0.7;
+    }
+
+    #head {
+        margin-left: -5px;
+        font-size: 12px;
+        font-family: DancingScript;
+    }
+
+    #updateForm {
+        scale: 0.8;
+    }
+}
+
+/* upto 420px */
+@media only screen and (max-width: 420px) {
+    .example-form {
+        min-width: 30px;
+        max-width: 120px;
+        width: 100%;
+        border-radius: 5px;
+        margin-left: -15px;
+        scale: 0.5;
+    }
+
+    #badge {
+        margin-top: -50px;
+        margin-left: 250px;
+        scale: 0.6;
+    }
+
+    .table {
+        margin-left: 0px;
+        width: 20px;
+        font-size: 7.5px;
+    }
+
+    .tablebtns {
+        font-size: 7.5px;
+    }
+
+    #secIcon {
+        margin-left: -15px;
+        margin-right: 0px;
+        scale: 0.6;
+    }
+
+    #head {
+        margin-left: -10px;
+        font-size: 11px;
+        font-family: DancingScript;
+    }
+
+    .r1 {
+        color: black;
+        text-decoration-line: none;
+        font-size: 11px;
+    }
+
+    .r11 {
+        color: black;
+        text-decoration-line: none;
+        font-size: 11px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #updateForm {
+        scale: 0.8;
+    }
+}
+
+/* upto 400px */
+@media only screen and (max-width: 400px) {
+    .example-form {
+        min-width: 40px;
+        max-width: 120px;
+        width: 100%;
+        border-radius: 5px;
+        margin-left: -20px;
+        scale: 0.4;
+    }
+
+    #badge {
+        margin-top: -50px;
+        margin-left: 240px;
+        scale: 0.5;
+    }
+
+    .table {
+        margin-left: 0px;
+        width: 20px;
+        font-size: 6px;
+    }
+
+    .tablebtns {
+        font-size: 6px;
+    }
+
+    #secIcon {
+        margin-left: -20px;
+        margin-right: 0px;
+        scale: 0.6;
+    }
+
+    #head {
+        margin-left: -10px;
+        font-size: 10px;
+        font-family: DancingScript;
+    }
+
+    .r1 {
+        color: black;
+        text-decoration-line: none;
+        font-size: 10px;
+    }
+
+    .r11 {
+        color: black;
+        text-decoration-line: none;
+        font-size: 10px;
+        margin-left: 5px;
+        margin-right: 0px;
+    }
+
+    #updateForm {
+        scale: 0.7;
+    }
+}

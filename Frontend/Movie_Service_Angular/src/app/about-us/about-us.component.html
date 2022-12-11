@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <style>
+    body,
+    html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+    }
+
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("/assets/back/back2.jpg");
+      min-height: 75%;
+    }
+
+    .menu {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <!-- Header with image -->
+  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">the<br>Movies Flix</span>
+    </div>
+    <br><button id="b2d" mat-flat-button color="primary" (click)="backToDashboard()">Back to
+      dashboard</button>
+  </header>
+
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-grayscale w3-large">
+
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+      <div class="w3-content" style="max-width:700px">
+        <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">OUR TEAM</span></h5>
+      </div>
+    </div>
+  </div><br><br>
+
+  <h2 style="text-align:center"></h2>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2>Akshay Kumar</h2>
+          <p class="title">FULL STACK DEVELOPER</p>
+          <!-- <p>Jane Doe is ceo and founder of moviesflix.</p> -->
+          <p>akshay@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2>Ankit Prajapati</h2>
+          <p class="title">FULL STACK DEVELOPER</p>
+          <!-- <p>Mike Ross is art director of moviesflix.</p> -->
+          <p>ankit@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2>Sai Bhargav</h2>
+          <p class="title">FULL STACK DEVELOPER</p>
+          <!-- <p>Dwight is designer of moviesflix.</p> -->
+          <p>sai@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label style="font-weight: bold;">Leave us a comment</mat-label>
+        <textarea matInput #userMsg placeholder="Ex. It makes me feel..."></textarea>
+      </mat-form-field>
+      <div class="sBtn">
+        <button mat-flat-button color="primary" (click)="sendFeedback(userMsg.value)">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Site footer -->
+  <br><br><br>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">Moviesflix 2023 is a popular free movie browsing site. Moviesflix lets you
+            play Bollywood, Hollywood, Telugu, Tamil, and Malayalam movies for free, which is a very famous site
+            among customers. Moviesflix provides an opportunity to transfer pirated versions of newly released movies on
+            its site.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>TECHNOLOGIES</h6>
+          <ul class="footer-links">
+            <li><a>Java</a></li>
+            <li><a>BOOTSTRAP</a></li>
+            <li><a>ANGULAR</a></li>
+            <li><a>MYSQL</a></li>
+            <li><a>MONGO DB</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="http://localhost:4200/aboutus">About Us</a></li>
+            <li><a href="http://localhost:4200/aboutus">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by Movies Flix
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <router-outlet></router-outlet>
